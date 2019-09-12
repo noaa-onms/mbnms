@@ -1,0 +1,10 @@
+---
+title: "Estuary"
+params:
+  csv: "svg/svg_links.csv"
+  svg: "svg/mbnms_estuary.svg"
+---
+
+```{r svg, child = '_svg-html_child.Rmd'}
+```
+

@@ -1,0 +1,10 @@
+---
+title: "Pelagic"
+params:
+  svg: "svg/mbnms_pelagic.svg"
+  csv: "svg/svg_links.csv"
+---
+
+```{r svg, child = '_svg-html_child.Rmd'}
+```
+

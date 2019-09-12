@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>README.utf8.md</title>
+
+<script src="modals/modal_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="modals/modal_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
+<script src="modals/modal_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="modals/modal_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="modals/modal_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="modals/modal_libs/navigation-1.1/tabsets.js"></script>
+<link href="modals/modal_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="modals/modal_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MBNMS</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="deep-seafloor.html">Deep Seafloor</a>
+</li>
+<li>
+  <a href="estuary.html">Estuary</a>
+</li>
+<li>
+  <a href="kelp-forest.html">Kelp Forest</a>
+</li>
+<li>
+  <a href="pelagic.html">Pelagic</a>
+</li>
+<li>
+  <a href="rocky-shore.html">Rocky Shore</a>
+</li>
+<li>
+  <a href="sandy-beach.html">Sandy Beach</a>
+</li>
+<li>
+  <a href="sandy-seafloor.html">Sandy Seafloor</a>
+</li>
+<li>
+  <a href="seamount-ridge.html">Seamount Ridge</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="readme.html">About</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="mbnms" class="section level1">
+<h1>mbnms</h1>
+<p>Monterey Bay National Marine Sanctuary (MBNMS) - infographics</p>
+<p>This website uses a simple interactive infographics implementation based on JavaScript only (ie not using the R-based <a href="https://github.com/marinebon/infographiq">infographiq</a>).</p>
+<div id="technical-implementation" class="section level2">
+<h2>technical implementation</h2>
+<p>The illustration in scalable vector graphics (<code>.svg</code>) format has individual elements given an identefier (ie <code>id</code>) which are linked to popup (ie “modal”) windows of content using a simple table in comma-seperated value (<code>.csv</code>) format using <a href="https://d3js.org">d3</a>.</p>
+<div id="core-files-.svg-.csv" class="section level3">
+<h3>core files: <code>.svg</code>, <code>.csv</code></h3>
+<p>These two files are at the core of the infographic construction:</p>
+<ol style="list-style-type: decimal">
+<li><strong>illustration</strong>: <a href="https://github.com/marinebon/mbnms/blob/master/svg/mbnms_pelagic.svg"><code>mbnms_pelagic.svg</code></a></li>
+<li><strong>table</strong>: <a href="https://github.com/marinebon/iea-ak-info/blob/master/svg/svg_links.csv"><code>svg_links.csv</code></a></li>
+</ol>
+<p>Each <code>link</code> in the table per element identified (<code>id</code>) is the page of content displayed in the modal popup window when the given element is clicked. The <code>title</code> determines the name on hover and title of the modal window.</p>
+</div>
+<div id="html-and-jscss-dependencies" class="section level3">
+<h3>html and js/css dependencies</h3>
+<p>The illustration (<code>.svg</code>) and table (<code>.csv</code>) get rendered with the <code>link_svg()</code> function (defined in <code>infographiq.js</code>) with the following HTML:</p>
+<pre class="html"><code>&lt;!-- load dependencies on JS &amp; CSS --&gt;
+&lt;script src=&#39;https://d3js.org/d3.v5.min.js&#39;&gt;&lt;/script&gt;
+&lt;script src=&#39;infographiq.js&#39;&gt;&lt;/script&gt;
+
+&lt;!-- add placeholder in page for placement of svg --&gt;
+&lt;div id=&#39;svg&#39;&gt;&lt;/div&gt;
+
+&lt;!-- run function to link the svg --&gt;
+&lt;script&gt;link_svg(svg=&#39;svg/mbnms_pelagic.svg&#39;, csv=&#39;svg/svg_links.csv&#39;);&lt;/script&gt;</code></pre>
+<p>The modal popup windows are rendered by <a href="https://getbootstrap.com/docs/3.3/javascript/#modals">Bootstrap modals</a>. This dependency is included with the default Rmarkdown rendering, but if you need to seperately include it then add this HTML:</p>
+<pre class="html"><code>&lt;!-- load dependencies on JS &amp; CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css&quot;&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+</div>
+</div>
+<div id="build-and-view-website-in-r" class="section level2">
+<h2>build and view website in R</h2>
+<p>This website is constructed using <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">Rmarkdown website</a> for enabling easy construction of site-wide navigation (see <a href="https://github.com/marinebon/iea-ak-info/blob/master/_site.yml"><code>_site.yml</code></a>) and embedding of <a href="https://www.htmlwidgets.org">htmlwidgets</a>, which provide interactive maps, time series plots, etc into the html pages to populate the modal window content in <a href="https://github.com/marinebon/iea-ak-info/tree/master/modals"><code>modals/</code></a>. To build the website and view it, here are the commands to run in R:</p>
+</div>
+<div id="develop" class="section level2">
+<h2>develop</h2>
+<div id="content-editing-workflow" class="section level3">
+<h3>content editing workflow</h3>
+<ol style="list-style-type: decimal">
+<li>edit .Rmd files in <code>./docs/modals/</code></li>
+<li>run <code>make_site.R</code></li>
+</ol>
+<p>NOTE: The <code>.html</code> files <em>can</em> be edited but by default <code>.html</code> files are overwritten by content knit from the <code>Rmd</code> files of the same name. To use html directly set <code>redo_modals &lt;- T</code>, but you will need to clear <code>.html</code> files manually with this setting.</p>
+</div>
+<div id="testing" class="section level3">
+<h3>testing</h3>
+<p>Because of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a> restrictions, need local web server to debug:</p>
+<pre class="r"><code># build website
+source(&quot;render_site.R&quot;)
+
+# serve website
+servr::httd(&quot;docs&quot;)</code></pre>
+<p>or using Python:</p>
+<pre class="bash"><code>cd ~/github/mbnms/docs; python -m SimpleHTTPServer</code></pre>
+<p>The <a href="https://github.com/marinebon/iea-ak-info/blob/master/render_site.R"><code>render_site.R</code></a> script renders the modal and website pages.</p>
+<p>Note the actual html content served at <a href="https://marinebon.github.io/mbnms">marinebon.github.io/mbnms</a> via <a href="https://pages.github.com/">Github Pages</a> is all the html/jss/csss files copied into the <code>docs/</code> folder of this repository.</p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+</body>
+</html>

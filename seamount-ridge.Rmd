@@ -1,0 +1,9 @@
+---
+title: "Seamount Ridge"
+params:
+  svg: "svg/mbnms_seamount-ridge.svg"
+  csv: "svg/svg_links.csv"
+---
+
+```{r svg, child = '_svg-html_child.Rmd'}
+```

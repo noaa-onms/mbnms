@@ -1,0 +1,12 @@
+---
+title: "Overview"
+params:
+  csv: "svg/svg_links.csv"
+  svg: "svg/mbnms_overview.svg"
+---
+
+Please explore the interactive infographics for Monterey Bay National Marine Sanctuary (MBNMS) to learn more about elements in each habitat.
+
+```{r svg, child = '_svg-html_child.Rmd'}
+```
+
