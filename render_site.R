@@ -39,7 +39,7 @@ for (i in 1:nrow(d)){ # i=1
 }
 
 # render website, ie Rmds in root ----
-walk(list.files(".", "*\\.md$"), iq_render)
+walk(list.files(".", "*\\.md$"), render_modal)
 walk(
   list.files(".", "*\\.html$"), 
   function(x) file.copy(x, file.path("docs", x)))
