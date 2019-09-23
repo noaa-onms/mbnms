@@ -1,0 +1,62 @@
+
+```{r, include=F}
+knitr::opts_chunk$set(echo=F, message=F, warning=F, error=F)
+source(here::here("../cinms/scripts/rocky.R"))
+```
+
+## {.tabset}
+
+### Dwarf Rockweed
+
+```{r}
+plot_intertidal_nms(d_csv, "MBNMS", "PELLIM", "Dwarf Rockweed")
+```
+
+
+### Golden Rockweed
+
+```{r}
+plot_intertidal_nms(d_csv, "MBNMS", "SILCOM", "Golden Rockweed")
+```
+
+### Iridescent Weed
+
+```{r}
+plot_intertidal_nms(d_csv, "MBNMS", "MAZSPP", "Iridescent Weed")
+```
+
+### Northern Rockweed
+
+```{r}
+plot_intertidal_nms(d_csv, "MBNMS", "FUCGAR", "Northern Rockweed")
+```
+
+### Olive Rockweed
+
+```{r}
+#
+#
+plot_intertidal_nms(d_csv, "MBNMS", "HESCAL", "Olive Rockweed")
+```
+
+### Turfweed
+
+```{r}
+#plot_intertidal_nms(d_csv, "MBNMS", "PHYOVR", "Surfgrass")
+plot_intertidal_nms(d_csv, "MBNMS", "ENDMUR", "Turfweed")
+#plot_intertidal_nms(d_csv, "MBNMS", "MASPAP", "Turkish Washcloth")
+```
+
+## Map of Sites
+
+```{r}
+map_nms_sites("MBNMS")
+```
+
+
+
+
+
+
+
+

@@ -1,7 +1,6 @@
 ---
 title: "Overview"
 params:
-  csv: "svg/svg_links.csv"
   svg: "svg/mbnms_overview.svg"
 ---
 

@@ -47,18 +47,20 @@ mbnms_overview.svg,deep-seafloor,Deep Seafloor,deep-seafloor.html,T
 mbnms_overview.svg,estuary,Estuary,estuary.html,T
 mbnms_overview.svg,kelp-forest,Kelp Forest,kelp-forest.html,T
 mbnms_overview.svg,pelagic,Pelagic,pelagic.html,T
-mbnms_overview.svg,rocky-shore,Rocky Shore,rocky-shore.html,T
+mbnms_overview.svg,rocky-shore,*Rocky Shore,rocky-shore.html,T
 mbnms_overview.svg,sandy-beach,Sandy Beach,sandy-beach.html,T
 mbnms_overview.svg,sandy-seafloor,Sandy Seafloor,sandy-seafloor.html,T
 mbnms_overview.svg,seamount-ridge,Seamount Ridge,seamount-ridge.html,T
-mbnms_rocky-shore.svg,algal-groups,Algal groups,modals/algal-groups.html,
-mbnms_rocky-shore.svg,barnacles,Barnacles,modals/barnacles.html,
+mbnms_overview.svg,key-climate-ocean,*Key climate & ocean drivers,modals/key-climate-ocean.html,
+mbnms_overview.svg,key-human-activities,Key human activities,modals/key-human-activities.html,
+mbnms_rocky-shore.svg,algal-groups,*Algal groups,modals/algal-groups.html,
+mbnms_rocky-shore.svg,barnacles,*Barnacles,modals/barnacles.html,
 mbnms_rocky-shore.svg,black-abalone,Black abalone,modals/black-abalone.html,
 mbnms_rocky-shore.svg,black-oystercatcher,Black Oystercatcher,modals/black-oystercatcher.html,
 mbnms_rocky-shore.svg,inverts,Invertebrates,modals/inverts.html,
-mbnms_rocky-shore.svg,key-climate-ocean,Key climate & ocean drivers,modals/key-climate-ocean.html,
+mbnms_rocky-shore.svg,key-climate-ocean,*Key climate & ocean drivers,modals/key-climate-ocean.html,
 mbnms_rocky-shore.svg,key-human-activities,Key human activities,modals/key-human-activities.html,
-mbnms_rocky-shore.svg,mussels,Mussels,modals/mussels.html,
+mbnms_rocky-shore.svg,mussels,*Mussels,modals/mussels.html,
 mbnms_rocky-shore.svg,ochre-stars,Ochre star,modals/ochre-stars.html,
 mbnms_rocky-shore.svg,owl-limpets,Owl limpets,modals/owl-limpets.html,
 mbnms_sandy-beach.svg,armored-beach,Armored beach,modals/armored-beach.html,

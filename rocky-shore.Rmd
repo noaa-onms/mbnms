@@ -2,7 +2,6 @@
 title: "Rocky Shore"
 params:
   svg: "svg/mbnms_rocky-shore.svg"
-  csv: "svg/svg_links.csv"
 ---
 
 ```{r svg, child = '_svg-html_child.Rmd'}

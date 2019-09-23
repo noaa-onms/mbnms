@@ -2,6 +2,7 @@ name: "MBNMS info"
 output_dir: "docs"
 description: |
   MBNMS info
+svg_csv: "svg/svg_links_mbnms.csv"
 navbar:
   title: "MBNMS"
   icon: fa-info

@@ -15,8 +15,15 @@
   <ul id = "svg_list"></ul>
 </div>
 
+```{r, echo=F}
+svg_csv <- ifelse(
+  "csv" %in% names(params),
+  params$csv,
+  rmarkdown::site_config()$svg_csv)
+```
+
 <script>
-link_svg(svg = "`r params$svg`", csv = "`r params$csv`", debug = true);
+link_svg(svg = "`r params$svg`", csv = "`r svg_csv`", debug = true);
 </script>
 
 <script>

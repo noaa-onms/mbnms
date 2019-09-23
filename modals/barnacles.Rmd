@@ -1,0 +1,18 @@
+
+```{r, include=F}
+knitr::opts_chunk$set(echo=F, message=F, warning=F, error=F)
+source(here::here("../cinms/scripts/rocky.R"))
+```
+
+
+```{r}
+plot_intertidal_nms(d_csv, "MBNMS", "CHTBAL", "Acorn Barnacles")
+```
+
+
+## Map of Sites
+
+```{r}
+map_nms_sites("mbnms")
+```
+
