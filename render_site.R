@@ -57,4 +57,4 @@ fs::file_touch("docs/.nojekyll")
 # shortcuts w/out full render:
 # file.copy("libs", "docs", recursive=T)
 # file.copy("svg", "docs", recursive=T)
-
+# file.copy("modals", "docs", recursive=T)
