@@ -1,8 +1,71 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+```{r, include=F}
+knitr::opts_chunk$set(echo=F, message=F, warning=F, error=F)
+source(here::here("../cinms/scripts/rocky.R"))
+```
+
 ## {.tabset}
 
 ### Bird Entanglement
 
 ![Annual number of seabird carcasses reported as entangled in monthly Beach COMBER surveys from 1997-2012. The survey study area began with ten beaches (1997-1998), expanded to 11 beaches (1999), then to 17 beaches, including surveys in San Luis Obispo County (mid-2001-2002), and grew to 30 beaches by 2009 to the present. Note: The survey area has increased over time. The numbers reported are for total number of observation each year and have not been standardized by survey effort. Therefore, this data should not be used to examine trends in entanglement rates over time. Source: [Nevins et al. 2014](https://marinedebris.noaa.gov/sites/default/files/mdp_entanglement.pdf)](../img/mbnms_cr/bird-entanglements.jpg)
+
+```{r}
+library(rerddap)
+library(leaflet)
+source("~/github/cinms/scripts/rocky.R")
+
+
+nms <- "mbnms"
+# https://oceanview.pfeg.noaa.gov/erddap/tabledap/EB_MM_BC.html
+Sys.setenv(RERDDAP_DEFAULT_URL = "https://oceanview.pfeg.noaa.gov/erddap/")
+bc_id   <- "EB_MM_BC"
+bc_info <- info(bc_id)
+bc_vars <- bc_info$variables$variable_name
+
+# get NMS polygon
+nms_ply <- get_nms_ply(nms)
+
+# get NMS bounding box
+bb <- st_bbox(nms_ply)
+
+# extract by bounding box of NMS
+tbl <- tabledap(
+  bc_id, fields = bc_vars, 
+  glue("latitude>={bb$ymin}"),  
+  glue("latitude<={bb$ymax}"),
+  glue("longitude>={bb$xmin}"),  
+  glue("longitude<={bb$xmax}")) %>% 
+  as_tibble() %>% 
+  mutate(
+    longitude = as.numeric(longitude),
+    latitude  = as.numeric(latitude))
+
+# convert to points and filter by being in NMS polygon
+pts <- tbl %>% 
+  st_as_sf(
+    coords = c("longitude", "latitude"), 
+    crs = 4326, remove = F) %>% 
+  st_join(
+    nms_ply %>% select(SANCTUARY), 
+    join = st_intersects) %>% 
+  filter(!is.na(SANCTUARY)) # TODO: 63,600 -> 24,142 features?! expand to beach/GPS error?
+
+deadbird_pts <- pts %>% 
+  filter(
+    bird_or_mammal == "bird",
+    condition >= 2)  # 21,291 features
+
+
+
+leaflet(deadbird_pts) %>% 
+  addProviderTiles(providers$Esri.OceanBasemap) %>% 
+  addMarkers(clusterOptions = markerClusterOptions())
+```
 
 
 ### Whale Entanglement
