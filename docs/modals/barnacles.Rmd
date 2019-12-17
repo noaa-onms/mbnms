@@ -4,15 +4,16 @@ knitr::opts_chunk$set(echo=F, message=F, warning=F, error=F)
 source(here::here("../cinms/scripts/rocky.R"))
 ```
 
+## {.tabset}
 
-```{r}
-plot_intertidal_nms(d_csv, "MBNMS", "CHTBAL", "Acorn Barnacles")
-```
-
-
-## Map of Sites
+### Map of Sites
 
 ```{r}
 map_nms_sites("mbnms")
 ```
 
+### Acorn Barnacles (_Chthamalus dalli/fissus/Balanus glandula_) {.active}
+
+```{r}
+plot_intertidal_nms(d_csv, "MBNMS", "CHTBAL", "Acorn Barnacles")
+```

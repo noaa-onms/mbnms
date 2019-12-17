@@ -6,32 +6,38 @@ source(here::here("../cinms/scripts/rocky.R"))
 
 ## {.tabset}
 
-### Dwarf Rockweed
+### Map of Sites
+
+```{r}
+map_nms_sites("mbnms")
+```
+
+### Dwarf Rockweed (_Pelvetiopsis limitata_) {.active}
 
 ```{r}
 plot_intertidal_nms(d_csv, "MBNMS", "PELLIM", "Dwarf Rockweed")
 ```
 
 
-### Golden Rockweed
+### Golden Rockweed (_Silvetia compressa_)
 
 ```{r}
 plot_intertidal_nms(d_csv, "MBNMS", "SILCOM", "Golden Rockweed")
 ```
 
-### Iridescent Weed
+### Iridescent Weed (_Mazzaella (=Iridaea)_ species)
 
 ```{r}
 plot_intertidal_nms(d_csv, "MBNMS", "MAZSPP", "Iridescent Weed")
 ```
 
-### Northern Rockweed
+### Northern Rockweed (_Fucus gardneri_)
 
 ```{r}
 plot_intertidal_nms(d_csv, "MBNMS", "FUCGAR", "Northern Rockweed")
 ```
 
-### Olive Rockweed
+### Olive Rockweed (_Hesperophycus californicus_)
 
 ```{r}
 #
