@@ -25,7 +25,7 @@ navbar:
       href: seamount-ridge.html
   right:
     - text: "About"
-      href: readme.html
+      href: https://marinebon.org/sanctuaries/
 output:
   html_document:
     theme: lumen # darkly # https://bootswatch.com
